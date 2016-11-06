@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		8C12810F1DC286D00057FE18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C12810E1DC286D00057FE18 /* main.m */; };
 		8C1281121DC286D00057FE18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1281111DC286D00057FE18 /* AppDelegate.m */; };
-		8C1281151DC286D00057FE18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1281141DC286D00057FE18 /* ViewController.m */; };
 		8C1281181DC286D00057FE18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C1281161DC286D00057FE18 /* Main.storyboard */; };
 		8C12811A1DC286D00057FE18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C1281191DC286D00057FE18 /* Assets.xcassets */; };
 		8C12811D1DC286D00057FE18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C12811B1DC286D00057FE18 /* LaunchScreen.storyboard */; };
+		8C6FB9E51DC39DE200F21B07 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6FB9E41DC39DE200F21B07 /* CalculatorViewController.m */; };
+		8C876D8B1DCF1DF300D35CD2 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C876D8A1DCF1DF300D35CD2 /* Calculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +21,14 @@
 		8C12810E1DC286D00057FE18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C1281101DC286D00057FE18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8C1281111DC286D00057FE18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8C1281131DC286D00057FE18 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8C1281141DC286D00057FE18 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8C1281171DC286D00057FE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C1281191DC286D00057FE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C12811C1DC286D00057FE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C12811E1DC286D00057FE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C6FB9E31DC39DE200F21B07 /* CalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		8C6FB9E41DC39DE200F21B07 /* CalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
+		8C876D891DCF1DF300D35CD2 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		8C876D8A1DCF1DF300D35CD2 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +42,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C0A62701DCF8DAC00AF8461 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C876D891DCF1DF300D35CD2 /* Calculator.h */,
+				8C876D8A1DCF1DF300D35CD2 /* Calculator.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8C0A62711DCF8DE400AF8461 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8C6FB9E31DC39DE200F21B07 /* CalculatorViewController.h */,
+				8C6FB9E41DC39DE200F21B07 /* CalculatorViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8C0A62721DCF8E0100AF8461 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C1281161DC286D00057FE18 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		8C1281011DC286D00057FE18 = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +89,9 @@
 			children = (
 				8C1281101DC286D00057FE18 /* AppDelegate.h */,
 				8C1281111DC286D00057FE18 /* AppDelegate.m */,
-				8C1281131DC286D00057FE18 /* ViewController.h */,
-				8C1281141DC286D00057FE18 /* ViewController.m */,
-				8C1281161DC286D00057FE18 /* Main.storyboard */,
-				8C1281191DC286D00057FE18 /* Assets.xcassets */,
-				8C12811B1DC286D00057FE18 /* LaunchScreen.storyboard */,
-				8C12811E1DC286D00057FE18 /* Info.plist */,
+				8C0A62701DCF8DAC00AF8461 /* Model */,
+				8C0A62711DCF8DE400AF8461 /* Controller */,
+				8C0A62721DCF8E0100AF8461 /* View */,
 				8C12810D1DC286D00057FE18 /* Supporting Files */,
 			);
 			path = Calculator;
@@ -74,6 +100,9 @@
 		8C12810D1DC286D00057FE18 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8C1281191DC286D00057FE18 /* Assets.xcassets */,
+				8C12811B1DC286D00057FE18 /* LaunchScreen.storyboard */,
+				8C12811E1DC286D00057FE18 /* Info.plist */,
 				8C12810E1DC286D00057FE18 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -150,9 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C1281151DC286D00057FE18 /* ViewController.m in Sources */,
 				8C1281121DC286D00057FE18 /* AppDelegate.m in Sources */,
+				8C876D8B1DCF1DF300D35CD2 /* Calculator.m in Sources */,
 				8C12810F1DC286D00057FE18 /* main.m in Sources */,
+				8C6FB9E51DC39DE200F21B07 /* CalculatorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +339,7 @@
 				8C1281231DC286D10057FE18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CalculatorViewController.h
 //  Calculator
 //
 //  Created by Sabbir Ahmed on 10/28/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CalculatorViewController : UIViewController
 
 @end
-
