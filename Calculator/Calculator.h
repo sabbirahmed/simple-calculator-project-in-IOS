@@ -10,6 +10,8 @@
 
 @interface Calculator : NSObject
 
+@property (nonatomic, readonly) double result;
+
 -(void)setOperand:(double)operand;
 -(void)performOperation:(NSString*)symbol;
 

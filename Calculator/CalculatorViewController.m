@@ -33,6 +33,20 @@
    
 }
 
+-(double)displayValue {
+    return [outputLabel.text doubleValue];
+}
+
+-(void)setDisplayValue:(double)displayValue {
+    if (displayValue == (long int)displayValue) {
+        outputLabel.text = [NSString stringWithFormat:@"%ld", (long int)displayValue];
+    }
+    else
+        outputLabel.text = [NSString stringWithFormat:@"%g", displayValue];
+}
+
+#pragma mark - User Actions
+
 - (IBAction)numberPressed:(UIButton *)sender {
     NSString *digit = sender.currentTitle;
     
@@ -41,9 +55,8 @@
             outputLabel.text = @"0.";
         }else if (isDecimalPressed == NO){
             outputLabel.text = [NSString stringWithFormat:@"%@%@", outputLabel.text, digit];
-        }else{
-            isDecimalPressed = YES;
         }
+        isDecimalPressed = YES;
     }else if (isTypingNumber == YES && [outputLabel.text isEqual:@"0"] == NO){
         outputLabel.text = [NSString stringWithFormat:@"%@%@", outputLabel.text, digit];
     }else{
@@ -60,8 +73,10 @@
     }
     
     if (sender.currentTitle != nil && sender.currentTitle.length > 0) {
-        [_calculator per]
+        [_calculator performOperation:sender.currentTitle];
     }
+    
+    self.displayValue = _calculator.result;
 }
 
 

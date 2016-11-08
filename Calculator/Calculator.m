@@ -46,11 +46,11 @@ typedef double (^BinaryOperation) (double, double);
                         return firstOperand / secondOperand;
                     },
                     
-                    @"×" : ^(double firstOperand, double secondOperand) {
+                    @"x" : ^(double firstOperand, double secondOperand) {
                         return firstOperand * secondOperand;
                     },
                     
-                    @"−" : ^(double firstOperand, double secondOperand) {
+                    @"-" : ^(double firstOperand, double secondOperand) {
                         return firstOperand - secondOperand;
                     },
                     
@@ -60,6 +60,12 @@ typedef double (^BinaryOperation) (double, double);
                     };
 }
 
+-(void)performPedingBinaryOperation {
+    if (pendingBinaryOperation != nil) {
+        accumulator = pendingBinaryOperation(initialOperand, accumulator);
+        pendingBinaryOperation = nil;
+    }
+}
 
 #pragma mark - Public API
 
